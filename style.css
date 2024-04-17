@@ -231,6 +231,9 @@ a, button {
 	color: #2E3D49;
 	position: relative;
 }
+#about_section{
+	margin-top:50px;
+}
 .diffSection {
 	margin-top:100px;
 	width: 100%;
