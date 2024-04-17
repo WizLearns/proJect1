@@ -20,7 +20,43 @@
         })
     </script>
     <style>
-	    /* CSS for the header */
+	/* Primary Color */
+:root {
+  --primary-color: #2E3D49;
+}
+
+/* Secondary Color */
+:root {
+  --secondary-color: #FA4B37;
+}
+
+/* Accent Color */
+:root {
+  --accent-color: #DF2771;
+}
+
+/* Background Color */
+body {
+  background-color: #FFF;
+}
+
+/* Example Usage */
+/* Primary Color */
+nav ul li a {
+  color: var(--primary-color);
+}
+
+/* Secondary Color */
+.get-started button {
+  background-color: var(--secondary-color);
+}
+
+/* Accent Color */
+nav ul li a:hover,
+nav ul li .active {
+  background-color: var(--accent-color);
+}
+    /* CSS for the header */
 header {
     background-color: white; /* Set default background color */
     transition: background-color 0.3s ease; /* Add transition for smooth color change */
