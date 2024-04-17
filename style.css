@@ -95,8 +95,8 @@ nav ul li a:hover {
     background-color: #1c2a33; /* Change background color on hover */
 }
 .logo img{
-	width: 200px;
-	height: 200px;
+	width: 140px;
+	height: 140px;
 	cursor: pointer;
 	transition: all 1s;
 }
