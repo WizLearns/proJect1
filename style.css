@@ -460,10 +460,22 @@ a, button {
 	align-self: center;
 }
 .btn-roshan:hover {
-	background: rgba(0,255,0,0.7);
+	background: rgba(0,255,0,0.5);
 	color: #fff;
 }
 .btn-roshan2:hover {
+	background: rgba(0,0,255,0.5);
+	color: #fff;
+}
+.btn-roshan3:hover {
+	background: rgba(0,0,255,0.5);
+	color: #fff;
+}
+.btn-roshan4:hover {
+	background: rgba(0,0,255,0.5);
+	color: #fff;
+}
+.btn-roshan5:hover {
 	background: rgba(0,0,255,0.5);
 	color: #fff;
 }
