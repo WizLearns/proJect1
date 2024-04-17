@@ -81,20 +81,18 @@ nav ul li a:hover {
 	background: transparent;
 }
 
-.get-started {
-	margin-left: 50px;
-	padding: 5px 20px;
-	border: 2px solid #DF2771;
-	border-radius: 20px;
-	text-decoration: none;
-	
-	transition: .5s;
-	background-color: #DF2771;
-	color: #fff;
+.get-started button {
+    background-color: #2E3D49;
+    color: white; /* Set text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Change cursor on hover */
 }
-.get-started:hover {
-	color: #2e2e2e;
-	background: #fff;
+
+/* CSS for hover effect */
+.get-started button:hover {
+    background-color: #1c2a33; /* Change background color on hover */
 }
 .logo img{
 	width: 100px;
