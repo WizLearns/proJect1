@@ -1,29 +1,13 @@
-// Changing the style of scroll bar
-// window.onscroll = function() {myFunction()};
+ //Changing the style of scroll bar
+window.onscroll = function() {myFunction()};
 		
-// function myFunction() {
-// 	var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-// 	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-// 	var scrolled = (winScroll / height) * 100;
-// 	document.getElementById("myBar").style.width = scrolled + "%"; 
-// }
-document.addEventListener("DOMContentLoaded", function() {
-        // Get references to the search input and button
-        const searchInput = document.getElementById("searchInput");
-        const searchButton = document.getElementById("searchButton");
+ function myFunction() {
+ 	var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+ 	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+ 	var scrolled = (winScroll / height) * 100;
+ 	document.getElementById("myBar").style.width = scrolled + "%"; 
+ }
 
-        // Add click event listener to the search button
-        searchButton.addEventListener("click", function() {
-            // Get the search query entered by the user
-            const query = searchInput.value.trim();
-
-            // Perform the search operation (replace this with your actual search functionality)
-            alert("You searched for: " + query);
-
-            // Clear the search input field after performing the search
-            searchInput.value = "";
-        });
-    });
 function scrollAppear() {
   var introText = document.querySelector('.side-text');
   var sideImage = document.querySelector('.sideImage');
