@@ -61,7 +61,10 @@ body {
 	transform: translateY(5px);
 	padding-top: 5px;
 }
-
+.nav #learned-logo{
+	height: 140px;
+	width: 140px;
+}
 .nav ul li 
 {
 	list-style: none;
