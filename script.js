@@ -160,14 +160,14 @@ function sideMenu(side) {
   side++;
 }
 // Login form submission
-const loginForm = document.getElementById('login');
-loginForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  const loginData = `Login Data:\nEmail: ${email}\nPassword: ${password}`;
-  sendDataToEmail(loginData);
-});
+//const loginForm = document.getElementById('login');
+//loginForm.addEventListener('submit', (e) => {
+ // e.preventDefault();
+  //const email = document.getElementById('email').value;
+  //const password = document.getElementById('password').value;
+  //const loginData = `Login Data:\nEmail: ${email}\nPassword: ${password}`;
+  //sendDataToEmail(loginData);
+//});
 
 // Registration form submission
 const registerForm = document.getElementById('register');
