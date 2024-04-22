@@ -1,81 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login SignUp</title>
-    <link rel="stylesheet" type="text/css" href="loginStyle.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+	<title>Login SignUp</title>
+	<link rel="stylesheet" type="text/css" href="loginStyle.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- It will redirect to the Home Page after submitting the form -->
+  <script>
+  $(document).ready(function(){
+    $("form").submit(function(){
+      alert("Great Job !");
+    });
+  });
+  </script>
 </head>
 <body>
-    <div class="form-box">
-        <div class="button-box">
-            <div id="btn"></div>
-            <button type="button" class="toggle-btn" id="log" onclick="login()" style="color: #fff;">Log In</button>
-            <button type="button" class="toggle-btn" id="reg" onclick="register()">Register</button>
-        </div>
-        <div class="social-icons">
-            <a><img src="images/icon/fb2.png" href=""></a>
-            <a href="https://www.instagram.com/wiz1learns"><img src="images/icon/insta2.png"></a>
-            <a href="https://www.linkedin.com/in/prem-vaniya-a7b829275/"><img src="images/icon/linkedin.png"></a>
-        </div>
-        <!-- Login Form -->
-        <form id="loginForm" class="input-group">
-            <div class="inp">
-                <input type="text" id="email" class="input-field" placeholder="👤 Username or Phone Number" style="width: 88%; border:none;" required>
-            </div>
-            <div class="inp">
-                <img src="images/icon/password.png"><input type="password" id="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required>
-            </div>
-            <input type="checkbox" class="check-box">Remember Password
-            <button type="submit" class="submit-btn">Log In</button>
-        </form>
-        <div class="other" id="other">
-            <div class="instead">
-                <h3>or</h3>
-            </div>
-            <button class="connect" onclick="google()">
-                <img src="images/icon/google.png"><span>Sign in with Google</span>
-            </button>
-        </div>
-        <!-- Registration Form -->
-        <form id="registerForm" class="input-group">
-            <input type="text" class="input-field" placeholder="Full Name" required>
-            <input type="email" class="input-field" placeholder="Email Address" required>
-            <input type="password" class="input-field" placeholder="Create Password" required>
-            <input type="password" class="input-field" placeholder="Confirm Password" required>
-            <input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">I agree to the Terms & Conditions
-            <button type="submit" id="btnSubmit" class="submit-btn reg-btn">Register</button>
-        </form>
-    </div>
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" id="log" onclick="login()" style="color: #fff;">Log In</button>
+				<button type="button" class="toggle-btn" id="reg" onclick="register()">Register</button>
+			</div>
+			<div class="social-icons">
+				<a><img src="images/icon/fb2.png" href="";></a>
+				<a href="https://www.instagram.com/wiz1learns"><img src="images/icon/insta2.png"></a>
+				<a href="https://www.linkedin.com/in/prem-vaniya-a7b829275/"><img src="images/icon/linkedin.png" ></a>
+			</div>
+			
+			<!-- Login Form -->
+			<form id="login" class="input-group" action="index.html">
+				<div class="inp">
+					<input type="text" id="email" class="input-field" placeholder="👤  Username or Phone Number" style="width: 88%; border:none;" required="required">
+				</div>
+				<div class="inp">
+					<img src="images/icon/password.png"><input type="password" id="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
+				</div>
+				<input type="checkbox" class="check-box">Remember Password
+				<button type="submit" class="submit-btn">Log In</button>
+			</form>
 
-    <script>
-        // Login form submission
-        const loginForm = document.getElementById('loginForm');
-        loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const loginData = `Login Data:\nEmail: ${email}\nPassword: ${password}`;
-            sendDataToEmail(loginData);
-        });
 
-        // Registration form submission
-        const registerForm = document.getElementById('registerForm');
-        registerForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const fullName = registerForm.elements[0].value;
-            const email = registerForm.elements[1].value;
-            const password = registerForm.elements[2].value;
-            const confirmPassword = registerForm.elements[3].value;
-            const registerData = `Registration Data:\nFull Name: ${fullName}\nEmail: ${email}\nPassword: ${password}\nConfirm Password: ${confirmPassword}`;
-            sendDataToEmail(registerData);
-        });
-
-        // Function to send data to email
-        function sendDataToEmail(data) {
-            const emailBody = encodeURIComponent(data);
-            const mailtoLink = `mailto:vaniyaprem77@gmail.com?body=${emailBody}`;
-            window.open(mailtoLink);
-        }
-    </script>
+			<div class="other" id="other">
+				<div class="instead">
+					<h3>or</h3>
+				</div>
+				<button class="connect" onclick="google()">
+					<img src="images/icon/google.png"><span>Sign in with Google</span>
+				</button>
+			</div>
+			
+			<!-- Registration Form -->
+			<form id="register" class="input-group" action="mailto:vaniyaprem77@gmail.com" method="post" enctype="text/plain">
+				<input type="text" class="input-field" placeholder="Full Name" required="required">
+				<input type="email" class="input-field" placeholder="Email Address" required="required">
+				<input type="password" class="input-field" placeholder="Create Password" name="psame" required="required">
+				<input type="password" class="input-field" placeholder="Confirm Password" name="psame" required="required">
+				<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">I agree to the Terms & Conditions
+				<button type="submit" id="btnSubmit" class="submit-btn reg-btn">Register</button>
+			</form>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
